@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import ThoughtList from "./components/thoughtlist/ThoughtList";
+import TodoList from "./components/todolist/TodoList";
+import { Container } from "@mui/system";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container
+      disableGutters
+      maxWidth="false"
+      sx={{
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "center",
+        height: "100vh",
+      }}
+    >
+      <ThoughtList />
+      <TodoList />
+    </Container>
   );
 }
 
