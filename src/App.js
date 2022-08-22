@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import ThoughtList from "./components/thoughtlist/ThoughtList";
 import TodoList from "./components/todolist/TodoList";
-import { Container } from "@mui/system";
+import { Container, Box } from "@mui/system";
 import { ButtonGroup, Button } from "@mui/material";
 
 function App() {
@@ -46,10 +46,14 @@ function App() {
           Task
         </Button>
       </ButtonGroup>
-      {isThoughtShown && <div></div>}
-      {isThoughtShown && <ThoughtList />}
-      {isTaskShown && <div></div>}
-      {isTaskShown && <TodoList />}
+      <Box>
+        {isTaskShown && ""}
+        {isTaskShown && <TodoList />}
+      </Box>
+      <Box>
+        {isThoughtShown && ""}
+        {isThoughtShown && <ThoughtList />}
+      </Box>
     </Container>
   );
 }

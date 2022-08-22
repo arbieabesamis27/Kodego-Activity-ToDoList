@@ -5,7 +5,7 @@ import { Box } from "@mui/system";
 import { Typography } from "@mui/material";
 
 function ThoughtList() {
-  const localThoughtList = localStorage.getItem("Thoughts");
+  const localThoughtList = localStorage.getItem("thoughts");
   const thoughtsInfo = localThoughtList ? JSON.parse(localThoughtList) : [];
   const [thoughts, setThoughts] = useState(thoughtsInfo);
 
